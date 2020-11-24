@@ -1,0 +1,20 @@
+.pagination {
+  .page-item {
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &.active {
+      .page-link {
+        background-color: $blue-shade-3;
+        border-color: $blue-shade-3;
+        color: $blue;
+      }
+    }
+  }
+
+  .page-link {
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+  }
+}

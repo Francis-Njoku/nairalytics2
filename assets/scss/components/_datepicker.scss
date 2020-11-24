@@ -1,0 +1,39 @@
+.react-datepicker {
+  border: 2px solid $blue-shade-4 !important;
+
+  &__header {
+    background-color: $bg !important;
+    border-bottom: 2px solid $blue-shade-4 !important;
+  }
+
+  &__triangle {
+    border-bottom-color: $bg !important;
+
+    &::before {
+      border-bottom-color: $blue-shade-4 !important;
+    }
+  }
+
+  &__day,
+  &__day-name {
+    color: $light-text !important;
+    font-size: 1.1rem !important;
+    line-height: 2.4rem !important;
+    width: 2.4rem !important;
+    margin: 0.4rem !important;
+    text-align: center;
+    vertical-align: middle;
+
+    &--keyboard-selected,
+    &--in-range {
+      background-color: $blue !important;
+      color: $white !important;
+    }
+  }
+
+  &__current-month {
+    color: $light-text !important;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+}

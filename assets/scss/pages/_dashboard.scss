@@ -1,0 +1,66 @@
+#admin {
+  .dashboard {
+    // border: 1px solid red;
+
+    &__form {
+      // border: 1px solid blue;
+      background-color: $white;
+      border-radius: 5px;
+
+      &__title {
+        color: $blue;
+        font-size: 2rem;
+      }
+
+      &__head {
+        align-items: center;
+        border-bottom: 1px solid $blue-shade-4;
+        display: flex;
+        justify-content: space-between;
+        padding: 3rem;
+      }
+
+      &__body {
+        padding: 3rem;
+      }
+
+      &__footer {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 3rem 5rem;
+      }
+
+      &__cta {
+      }
+
+      &__sections {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &__section {
+        flex: 0 1 auto;
+        margin-bottom: 5rem;
+        width: calc(50% - 5rem);
+
+        &--block {
+          flex: 1 1 auto;
+          width: 100%;
+        }
+
+        &__group {
+          &:not(:last-child) {
+            margin-bottom: 3rem;
+          }
+        }
+
+        &__title {
+          color: $blue;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

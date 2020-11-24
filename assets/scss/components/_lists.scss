@@ -1,0 +1,90 @@
+.side {
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    &__item {
+      border-color: $blue-shade-1;
+      font-weight: 600;
+      padding: 2rem;
+
+      &--title {
+        background-color: $blue;
+        color: $white;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__link {
+  }
+}
+
+.lv-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    align-items: center;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 500;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    &__label {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+
+      &__icon {
+        display: block;
+        height: auto;
+        margin-right: 1.5rem;
+        width: 1.5rem;
+
+        &.purple {
+          fill: purple;
+        }
+
+        &.orange {
+          fill: orange;
+        }
+
+        &.red {
+          fill: red;
+        }
+
+        &.blue {
+          fill: blue;
+        }
+
+        &.green {
+          fill: green;
+        }
+
+        &.pink {
+          fill: pink;
+        }
+      }
+
+      &__text {
+      }
+    }
+
+    &__value {
+      display: inline-block;
+    }
+  }
+
+  &__item {
+  }
+}

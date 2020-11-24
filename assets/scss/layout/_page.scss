@@ -1,0 +1,58 @@
+#customer {
+  .body {
+    margin: 0 auto;
+    max-width: $container;
+    padding: 0 1.5rem 2rem;
+
+    @media (min-width: 768px) {
+      padding: 0 1.5rem 5rem;
+    }
+  }
+
+  .main {
+    background-color: $white;
+    margin-bottom: 5rem;
+    padding: 4rem 1rem 3rem;
+
+    @media (min-width: 500px) {
+      padding: 10rem 2rem;
+    }
+
+    &--transparent {
+      background-color: transparent;
+    }
+
+    &__head {
+      background-color: $blue;
+      margin-bottom: 5rem;
+      padding: 5rem 2rem;
+    }
+  }
+}
+
+#admin {
+  height: 100vh;
+
+  .body {
+    align-items: flex-start;
+    display: flex;
+    height: calc(100vh - 7rem);
+    overflow: auto;
+    position: relative;
+  }
+
+  .aside {
+    background-color: $blue;
+    flex: 0 0 auto;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    width: 25rem;
+  }
+
+  .main {
+    background-color: $bg;
+    flex: 1 1 auto;
+    padding: 3rem 5rem;
+  }
+}

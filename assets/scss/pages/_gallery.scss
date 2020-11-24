@@ -1,0 +1,36 @@
+.gallery {
+  &__nav {
+    color: $blue;
+    margin-bottom: 5rem;
+
+    &__item {
+    }
+
+    &__link {
+      font-weight: 700;
+      padding: 1rem 2rem;
+      position: relative;
+      text-decoration: none;
+      transition: color 300ms ease;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &.active {
+        background-color: transparent !important;
+        color: inherit !important;
+
+        &::before {
+          background-color: $blue-shade-2;
+          bottom: -0.5rem;
+          content: "";
+          height: 4px;
+          left: 42%;
+          position: absolute;
+          width: 16%;
+        }
+      }
+    }
+  }
+}

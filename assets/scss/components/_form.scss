@@ -1,0 +1,158 @@
+.input-group {
+  &--with-border {
+    border: 2px solid $blue-shade-4 !important;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+}
+
+.form {
+  &__row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__col {
+    flex: 1 1 100%;
+
+    @media (min-width: 400px) {
+      flex: 0 1 calc(50% - 0.5rem);
+    }
+  }
+
+  &__group {
+    margin-bottom: 2rem;
+  }
+
+  &__label-group {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    color: $blue;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    color: $blue;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__link {
+    color: $blue;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0.5rem;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+
+  &__input,
+  &__select {
+    background-color: $white;
+    border: 2px solid $blue-shade-4;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.5rem 1rem;
+
+    @media (min-width: 400px) {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+
+    &--no-border {
+      border-color: $white;
+      border-radius: 0;
+    }
+
+    &--big {
+      padding: 2rem;
+
+      @media (min-width: 500px) {
+        padding: 3rem 2rem;
+      }
+    }
+
+    &--with-append {
+      border-bottom-right-radius: 0;
+      border-right-color: $white;
+      border-top-right-radius: 0;
+    }
+
+    &::placeholder {
+      color: $blue-shade-3;
+    }
+  }
+
+  &__select {
+    height: auto;
+    padding: 1rem;
+
+    option {
+      &:checked {
+        color: $blue-shade-3;
+      }
+    }
+
+    &--sm {
+      padding: 0.5rem;
+    }
+
+    &--country {
+      background-color: $blue-shade-4;
+    }
+  }
+
+  &__append {
+    background-color: $white;
+    border: 2px solid $white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+
+    @media (min-width: 400px) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__icon {
+    color: $blue-shade-3;
+    display: inline-block;
+    height: auto;
+    max-width: 2rem;
+    vertical-align: middle;
+
+    path {
+      fill: currentColor;
+    }
+  }
+
+  &__check {
+    &--inline {
+      margin-right: 2rem;
+    }
+
+    &__label {
+      margin-bottom: 0;
+    }
+
+    &__input {
+      margin-right: 1rem !important;
+    }
+  }
+}

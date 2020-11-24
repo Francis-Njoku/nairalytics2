@@ -1,0 +1,167 @@
+#admin {
+  .card {
+    background-color: $white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin: 1.5rem 0;
+    transition: transform 300ms ease;
+
+    &:hover {
+      transform: translateY(-1rem);
+    }
+
+    // Card type a found in dashboard
+    &-a {
+      padding: 2rem;
+
+      &__body {
+        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+
+        &__info {
+          align-items: center;
+          display: flex;
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        &__figure {
+          align-items: center;
+          display: flex;
+          flex: 0 0 auto;
+          justify-content: flex-start;
+
+          &__icon {
+            display: inline-block;
+            fill: $blue;
+            flex: 0 0 auto;
+            height: auto;
+            opacity: 0.6;
+            width: 3.5rem;
+
+            &:not(:last-child) {
+              margin-right: 0.2rem;
+            }
+
+            &.blue {
+              fill: blue;
+            }
+
+            &.purple {
+              fill: purple;
+            }
+
+            &.green {
+              fill: green;
+            }
+          }
+
+          &__img {
+            border-radius: 6px;
+            display: block;
+            flex: 0 0 auto;
+            height: 9rem;
+            object-fit: cover;
+            object-position: center;
+            width: 9rem;
+          }
+        }
+
+        &__img {
+        }
+      }
+
+      &__title {
+        color: $light-text;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+      }
+
+      &__figure {
+        color: $blue;
+        display: inline-block;
+        font-size: 2.6rem;
+        font-weight: 700;
+        margin-bottom: 0.2rem;
+      }
+
+      &__meta {
+        align-items: center;
+        display: flex;
+        font-size: 1.2rem;
+        font-weight: 800;
+        line-height: 1.2rem;
+
+        &--down {
+          color: red;
+
+          .card__meta__icon {
+            transform: rotate(180deg);
+          }
+        }
+
+        &--up {
+          color: green;
+        }
+
+        &__icon {
+          display: inline-block;
+          fill: currentColor;
+          flex: 0 0 auto;
+          height: auto;
+          margin-right: 0.2rem;
+          width: 1.2rem;
+        }
+
+        &__label {
+        }
+      }
+    }
+
+    // Card type b found in settings
+    &-b {
+      &__header {
+        border-bottom: 1px solid $blue-shade-4;
+        padding: 2rem;
+      }
+
+      &__body {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 2.5rem 3rem;
+      }
+
+      &__title {
+        color: $blue;
+        display: inline-block;
+        font-size: 1.8rem;
+        margin: 0;
+      }
+
+      &__details {
+        flex: 0 1 auto;
+        width: 17rem;
+      }
+
+      &__description {
+        margin-bottom: 1.5rem;
+      }
+
+      &__icon {
+        display: block;
+        fill: $blue;
+        flex: 0 0 auto;
+        height: auto;
+        width: 10rem;
+      }
+    }
+  }
+}

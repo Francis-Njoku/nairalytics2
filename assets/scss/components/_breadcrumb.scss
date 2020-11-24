@@ -1,0 +1,26 @@
+.breadcrumb-item + .breadcrumb-item::before {
+  color: inherit;
+  content: ">";
+  display: inline-block;
+  font-weight: 700;
+  padding-right: 0.5rem;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  margin: 0 0 3rem;
+  padding: 0;
+
+  &__item {
+    align-items: center;
+    color: $blue;
+    font-weight: 600;
+
+    &.active {
+      color: $blue;
+    }
+  }
+
+  &__link {
+  }
+}

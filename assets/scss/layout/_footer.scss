@@ -1,0 +1,107 @@
+.footer {
+  background-color: $blue;
+  border-radius: 10px;
+  color: $white;
+
+  &__top {
+    padding: 3rem 2rem 0;
+
+    @media (min-width: 600px) {
+      padding: 8rem 5rem 3rem;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $blue-dark;
+    padding: 2rem;
+
+    @media (min-width: 600px) {
+      padding: 2rem 5rem;
+    }
+  }
+
+  &__section {
+    margin-bottom: 5rem;
+
+    &__title {
+      font-size: 1.4rem;
+      letter-spacing: 0.04rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__contact {
+    margin-bottom: 2.5rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      display: block;
+
+      &:not(:last-of-type) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 500;
+    transition: all 300ms ease;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__copy {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__social {
+    list-style-type: none;
+    margin: 0;
+
+    &__item {
+      display: inline-block;
+      margin: 1rem;
+    }
+
+    &__link {
+      align-items: center;
+      background-color: $white;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0.8rem;
+
+      svg {
+        display: block;
+        fill: $blue;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        transition: fill 0.5s ease;
+        width: 1.5rem;
+      }
+    }
+  }
+}

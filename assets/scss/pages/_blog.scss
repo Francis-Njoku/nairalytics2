@@ -1,0 +1,11 @@
+.blog-posts {
+  &__cta {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5rem;
+
+    @media (min-width: 768px) {
+      margin: 5rem 0 0;
+    }
+  }
+}

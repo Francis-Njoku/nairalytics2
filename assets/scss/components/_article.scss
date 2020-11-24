@@ -1,0 +1,377 @@
+.articles {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: -1.2rem -1.2rem 5rem;
+
+  @media (min-width: 768px) {
+    margin: -1.2rem -1.2rem 0;
+  }
+
+  &--2cols {
+    .article {
+      flex: 0 1 100%;
+
+      @media (min-width: 500px) {
+        flex: 0 1 calc(50% - 2.4rem);
+      }
+    }
+  }
+}
+
+.article {
+  align-items: stretch;
+  border-radius: 5px;
+  display: flex;
+  flex: 0 1 100%;
+  flex-direction: column;
+  justify-content: stretch;
+  margin: 1.2rem;
+  overflow: hidden;
+
+  @media (min-width: 500px) {
+    flex: 0 1 calc(50% - 2.4rem);
+  }
+
+  @media (min-width: 768px) {
+    flex: 0 1 calc(100% / 3 - 2.4rem);
+  }
+
+  &:hover {
+    .article__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__head {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 17rem;
+    overflow: hidden;
+  }
+
+  &__body {
+    background-color: $white;
+    flex: 1 0 auto;
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 500ms ease;
+    width: 100%;
+  }
+
+  &__title {
+    color: $blue-dark !important;
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    &:hover {
+      color: $blue-dark;
+    }
+  }
+
+  &__description {
+    color: $light-text;
+    margin-bottom: 1.5rem;
+    max-height: 7rem;
+    overflow: hidden;
+  }
+
+  &__link {
+    background-color: $blue;
+    color: $white !important;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    transition: all 300ms ease;
+
+    &:hover {
+      background-color: $blue-dark;
+      text-decoration: none;
+    }
+  }
+
+  &__meta {
+    align-items: center;
+    border-top: 1px solid $lighter;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0 0;
+  }
+
+  &__date {
+    color: $blue-dark;
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__label {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &:not(:last-of-type) {
+        margin-right: 1.2rem;
+      }
+    }
+
+    &__icon {
+      display: block;
+      fill: currentColor;
+      height: auto;
+      margin: 0 0.5rem 0 0;
+      width: 2rem;
+
+      &--chat {
+      }
+
+      &--like {
+        fill: $orange;
+      }
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__users {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+
+    &__images {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &__image {
+      border: 2px solid #ffffff;
+      border-radius: 100%;
+      height: 2.4rem;
+      margin: 0;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.8;
+      width: 2.4rem;
+
+      &:not(:first-child) {
+        margin-left: -1.2rem;
+      }
+    }
+
+    &__count {
+      color: $lighter;
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.post {
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  &__head {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__body {
+    background-color: $white;
+    padding: 3rem 2rem;
+
+    @media (min-width: 500px) {
+      padding: 4rem 5rem 5rem;
+    }
+  }
+
+  &__image {
+    display: block;
+    height: auto;
+    margin: 0;
+    max-height: 50rem;
+    width: 100%;
+  }
+
+  &__category {
+    background-color: $purple;
+    color: $white;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+    padding: 0.8rem 1.5rem 0.6rem;
+    text-transform: uppercase;
+
+    @media (min-width: 500px) {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+      padding: 1rem 2rem 0.8rem;
+    }
+  }
+
+  &__title {
+    color: $blue-dark;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+
+    @media (min-width: 500px) {
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__description {
+    color: $light-text;
+  }
+
+  &__link {
+    background-color: $blue;
+    color: $white !important;
+    display: block;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    transition: all 300ms ease;
+
+    &:hover {
+      background-color: $blue-dark;
+      text-decoration: none;
+    }
+  }
+
+  &__meta {
+    align-items: center;
+    border-top: 1px solid $lighter;
+    color: $lighter;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 0 0;
+  }
+
+  &__date {
+    color: $blue-dark;
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__label {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: flex-start;
+
+    &__item {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+
+      &:not(:last-of-type) {
+        margin-right: 1.2rem;
+      }
+    }
+
+    &__icon {
+      display: block;
+      fill: currentColor;
+      height: auto;
+      margin: 0 0.5rem 0 0;
+      width: 2rem;
+
+      &--chat {
+      }
+
+      &--like {
+        fill: $orange;
+      }
+    }
+
+    &__text {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__users {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+
+    &__images {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    &__image {
+      border: 2px solid #ffffff;
+      border-radius: 100%;
+      height: 2.2rem;
+      margin: 0;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.8;
+      width: 2.2rem;
+
+      &:not(:first-child) {
+        margin-left: -1rem;
+      }
+
+      @media (min-width: 500px) {
+        height: 3rem;
+        width: 3rem;
+
+        &:not(:first-child) {
+          margin-left: -1.3rem;
+        }
+      }
+    }
+
+    &__count {
+      font-size: 1.2rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__share {
+    margin-top: 5rem;
+  }
+
+  &__comment {
+    margin-top: 5rem;
+
+    &__form {
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.sidebar {
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &__link {
+      background-color: transparent;
+      border-left: 6px solid transparent;
+      align-items: center;
+      color: $white !important;
+      display: flex;
+      justify-content: flex-start;
+      padding: 2rem;
+
+      &:hover {
+        background-color: $blue-dark;
+        text-decoration: none;
+      }
+
+      &.active {
+        background-color: $blue-dark;
+        border-color: $green;
+
+        .sidebar__nav__link__icon {
+          fill: $green;
+        }
+      }
+
+      &__icon {
+        display: block;
+        fill: currentColor;
+        height: auto;
+        margin-right: 1.5rem;
+        width: 2.5rem;
+      }
+
+      &__text {
+        font-weight: 600;
+      }
+    }
+  }
+}

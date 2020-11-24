@@ -1,0 +1,119 @@
+#customer {
+  .section {
+    &--bg {
+      background-color: $white;
+    }
+
+    &--center {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100rem;
+    }
+
+    &--pad {
+      padding: 5rem 3rem;
+
+      @media (min-width: 600px) {
+        padding: 10rem 3rem;
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 5rem;
+
+      @media (min-width: 768px) {
+        margin-bottom: 10rem;
+      }
+    }
+
+    &--mb-small {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+
+        @media (min-width: 768px) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+#admin {
+  .section {
+    &__title {
+      color: $blue;
+      font-size: 2.5rem;
+      font-weight: 500 !important;
+      margin-bottom: 2rem;
+    }
+
+    &__block {
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
+    }
+
+    &__card {
+      background-color: $white;
+      padding: 2.5rem 3rem 4rem;
+      transition: transform 300ms ease;
+
+      &:hover {
+        transform: translateY(-1rem);
+      }
+
+      &__head {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+      }
+
+      &__body {
+      }
+
+      &__footer {
+        padding-top: 3rem;
+      }
+
+      &__title {
+        color: $blue;
+        flex: 0 0 auto;
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+      }
+
+      &__link {
+        border: none;
+        background-color: transparent;
+        color: #119f93;
+        flex: 0 0 auto;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        text-transform: capitalize;
+      }
+
+      &__filter {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+
+        &__section {
+          align-items: center;
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        &__item {
+          &:not(:last-child) {
+            border-right: 1px solid blue;
+            margin-right: 0.5rem;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
